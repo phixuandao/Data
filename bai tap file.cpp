@@ -93,7 +93,7 @@ void sapxepnhanh(int a[],int left, int right)
     if(left<j) sapxepnhanh(a,left,j);
     if(i<right) sapxepnhanh(a,i,right);
 }
-using namespace std ;
+
 void usingFILEpointer(int a[],int n)
 {
 	FILE *f , *g;
