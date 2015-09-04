@@ -120,6 +120,7 @@ using namespace std ;
 int main()
 {
 	printf("Hello, i'm KennyTung");
+		printf("Hello, i'm dao");
 	//using FILe pointer
 	int n,a[500000],m;
 	printf("nhap so phan tu cua mang:\n");

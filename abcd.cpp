@@ -70,6 +70,7 @@ void Print(dt dathuc)
 }
 int main()
 {
+	///luan da ghe tham code nay
 	dt1 dathuc1=NULL;
 	dt2 dathuc2=NULL;
 	InsertAtFirst(dathuc1,5);
