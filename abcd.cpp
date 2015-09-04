@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
+//đánh dấu đã sửa
 typedef struct DaThuc
 {
 	float heso;
