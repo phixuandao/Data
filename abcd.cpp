@@ -7,6 +7,7 @@ typedef struct DaThuc
 {
 	float heso;
 	int somu;
+	//danh dau da sua_ Ubuntu
 };
 typedef struct node
 {
