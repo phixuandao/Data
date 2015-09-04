@@ -119,6 +119,7 @@ void usingFILEpointer(int a[],int n)
 using namespace std ;
 int main()
 {
+	printf("Hello, i'm KennyTung");
 	//using FILe pointer
 	int n,a[500000],m;
 	printf("nhap so phan tu cua mang:\n");
