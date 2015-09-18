@@ -84,6 +84,12 @@ begin
 select * from tblDauSach where TenDS like '%' + @tends + '%'
 end
 
+create proc FindMDS1 (@mads varchar(10))
+as
+begin
+select *from tblDauSach where MaDS like '%' + @mads + '%'
+end
+
 create proc AddDG(@tendg nvarchar(50), @ngaysinh datetime, @gioitinh nvarchar(3))
 as
 declare @i int
@@ -114,6 +120,12 @@ begin
 select * from tblDocGia where TenDG like '%' + @tendg + '%'
 end
 
+create proc FindMDG1(@madg varchar(10))
+as
+begin
+select * from tblDocGia where MaDG like '%' + @madg + '%'
+end
+
 create proc AddMT(@madg varchar(10), @mads varchar(10), @ngaytra datetime)
 as
 declare @i int
@@ -140,5 +152,17 @@ end
 create proc FindMT(@mapm varchar(10))
 as
 begin
-select * from tblMuonTra where MaPM = @mapm
+select * from tblMuonTra where MaPM like '%' + @mapm + '%'
+end
+
+create proc FindMDS2 (@mads varchar(10))
+as
+begin
+select * from tblMuonTra where MaDS like '%' + @mads + '%'
+end
+
+create proc FindMDG2 (@madg varchar(10))
+as
+begin
+select * from tblMuonTra where MaDG like '%' + @madg + '%'
 end
