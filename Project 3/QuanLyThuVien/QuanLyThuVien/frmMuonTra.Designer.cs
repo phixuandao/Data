@@ -36,25 +36,25 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMPM = new System.Windows.Forms.TextBox();
-            this.txtNT = new System.Windows.Forms.TextBox();
-            this.txtMDG = new System.Windows.Forms.TextBox();
-            this.txtNM = new System.Windows.Forms.TextBox();
-            this.txtMDS = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.butIns = new System.Windows.Forms.Button();
-            this.butUpd = new System.Windows.Forms.Button();
             this.butDel = new System.Windows.Forms.Button();
-            this.butFind = new System.Windows.Forms.Button();
-            this.txtFind = new System.Windows.Forms.TextBox();
-            this.rMPM = new System.Windows.Forms.RadioButton();
-            this.rMDS = new System.Windows.Forms.RadioButton();
+            this.butUpd = new System.Windows.Forms.Button();
+            this.butIns = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.rMDG = new System.Windows.Forms.RadioButton();
+            this.rMDS = new System.Windows.Forms.RadioButton();
+            this.rMPM = new System.Windows.Forms.RadioButton();
+            this.txtFind = new System.Windows.Forms.TextBox();
+            this.butFind = new System.Windows.Forms.Button();
+            this.txtMDS = new System.Windows.Forms.TextBox();
+            this.txtNM = new System.Windows.Forms.TextBox();
+            this.txtMDG = new System.Windows.Forms.TextBox();
+            this.txtNT = new System.Windows.Forms.TextBox();
+            this.txtMPM = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -156,90 +156,35 @@
             this.panel2.Size = new System.Drawing.Size(484, 208);
             this.panel2.TabIndex = 1;
             // 
-            // label1
+            // butDel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã Phiếu Mượn";
+            this.butDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butDel.Location = new System.Drawing.Point(226, 150);
+            this.butDel.Name = "butDel";
+            this.butDel.Size = new System.Drawing.Size(100, 30);
+            this.butDel.TabIndex = 13;
+            this.butDel.Text = "Xóa";
+            this.butDel.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // butUpd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mã Đầu Sách";
+            this.butUpd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUpd.Location = new System.Drawing.Point(120, 150);
+            this.butUpd.Name = "butUpd";
+            this.butUpd.Size = new System.Drawing.Size(100, 30);
+            this.butUpd.TabIndex = 12;
+            this.butUpd.Text = "Chỉnh sửa";
+            this.butUpd.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // butIns
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mã Độc Giả";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ngày Mượn";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Ngày Trả";
-            // 
-            // txtMPM
-            // 
-            this.txtMPM.Location = new System.Drawing.Point(152, 13);
-            this.txtMPM.Name = "txtMPM";
-            this.txtMPM.Size = new System.Drawing.Size(160, 20);
-            this.txtMPM.TabIndex = 5;
-            // 
-            // txtNT
-            // 
-            this.txtNT.Location = new System.Drawing.Point(152, 117);
-            this.txtNT.Name = "txtNT";
-            this.txtNT.Size = new System.Drawing.Size(160, 20);
-            this.txtNT.TabIndex = 6;
-            // 
-            // txtMDG
-            // 
-            this.txtMDG.Location = new System.Drawing.Point(152, 65);
-            this.txtMDG.Name = "txtMDG";
-            this.txtMDG.Size = new System.Drawing.Size(160, 20);
-            this.txtMDG.TabIndex = 7;
-            // 
-            // txtNM
-            // 
-            this.txtNM.Location = new System.Drawing.Point(152, 91);
-            this.txtNM.Name = "txtNM";
-            this.txtNM.Size = new System.Drawing.Size(160, 20);
-            this.txtNM.TabIndex = 8;
-            // 
-            // txtMDS
-            // 
-            this.txtMDS.Location = new System.Drawing.Point(152, 39);
-            this.txtMDS.Name = "txtMDS";
-            this.txtMDS.Size = new System.Drawing.Size(160, 20);
-            this.txtMDS.TabIndex = 9;
+            this.butIns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butIns.Location = new System.Drawing.Point(15, 150);
+            this.butIns.Name = "butIns";
+            this.butIns.Size = new System.Drawing.Size(100, 30);
+            this.butIns.TabIndex = 11;
+            this.butIns.Text = "Thêm mới";
+            this.butIns.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -254,63 +199,16 @@
             this.panel3.Size = new System.Drawing.Size(152, 208);
             this.panel3.TabIndex = 10;
             // 
-            // butIns
+            // rMDG
             // 
-            this.butIns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butIns.Location = new System.Drawing.Point(15, 150);
-            this.butIns.Name = "butIns";
-            this.butIns.Size = new System.Drawing.Size(100, 30);
-            this.butIns.TabIndex = 11;
-            this.butIns.Text = "Thêm mới";
-            this.butIns.UseVisualStyleBackColor = true;
-            // 
-            // butUpd
-            // 
-            this.butUpd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butUpd.Location = new System.Drawing.Point(120, 150);
-            this.butUpd.Name = "butUpd";
-            this.butUpd.Size = new System.Drawing.Size(100, 30);
-            this.butUpd.TabIndex = 12;
-            this.butUpd.Text = "Chỉnh sửa";
-            this.butUpd.UseVisualStyleBackColor = true;
-            // 
-            // butDel
-            // 
-            this.butDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butDel.Location = new System.Drawing.Point(226, 150);
-            this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(100, 30);
-            this.butDel.TabIndex = 13;
-            this.butDel.Text = "Xóa";
-            this.butDel.UseVisualStyleBackColor = true;
-            // 
-            // butFind
-            // 
-            this.butFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butFind.Location = new System.Drawing.Point(13, 150);
-            this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(100, 30);
-            this.butFind.TabIndex = 14;
-            this.butFind.Text = "Tìm kiếm";
-            this.butFind.UseVisualStyleBackColor = true;
-            // 
-            // txtFind
-            // 
-            this.txtFind.Location = new System.Drawing.Point(13, 13);
-            this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(133, 20);
-            this.txtFind.TabIndex = 14;
-            // 
-            // rMPM
-            // 
-            this.rMPM.AutoSize = true;
-            this.rMPM.Location = new System.Drawing.Point(13, 43);
-            this.rMPM.Name = "rMPM";
-            this.rMPM.Size = new System.Drawing.Size(100, 17);
-            this.rMPM.TabIndex = 15;
-            this.rMPM.TabStop = true;
-            this.rMPM.Text = "Mã Phiếu Mượn";
-            this.rMPM.UseVisualStyleBackColor = true;
+            this.rMDG.AutoSize = true;
+            this.rMDG.Location = new System.Drawing.Point(13, 95);
+            this.rMDG.Name = "rMDG";
+            this.rMDG.Size = new System.Drawing.Size(82, 17);
+            this.rMDG.TabIndex = 17;
+            this.rMDG.TabStop = true;
+            this.rMDG.Text = "Mã Độc Giả";
+            this.rMDG.UseVisualStyleBackColor = true;
             // 
             // rMDS
             // 
@@ -324,16 +222,118 @@
             this.rMDS.Text = "Mã Đầu Sách";
             this.rMDS.UseVisualStyleBackColor = true;
             // 
-            // rMDG
+            // rMPM
             // 
-            this.rMDG.AutoSize = true;
-            this.rMDG.Location = new System.Drawing.Point(13, 95);
-            this.rMDG.Name = "rMDG";
-            this.rMDG.Size = new System.Drawing.Size(82, 17);
-            this.rMDG.TabIndex = 17;
-            this.rMDG.TabStop = true;
-            this.rMDG.Text = "Mã Độc Giả";
-            this.rMDG.UseVisualStyleBackColor = true;
+            this.rMPM.AutoSize = true;
+            this.rMPM.Location = new System.Drawing.Point(13, 43);
+            this.rMPM.Name = "rMPM";
+            this.rMPM.Size = new System.Drawing.Size(100, 17);
+            this.rMPM.TabIndex = 15;
+            this.rMPM.TabStop = true;
+            this.rMPM.Text = "Mã Phiếu Mượn";
+            this.rMPM.UseVisualStyleBackColor = true;
+            // 
+            // txtFind
+            // 
+            this.txtFind.Location = new System.Drawing.Point(13, 13);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(133, 20);
+            this.txtFind.TabIndex = 14;
+            // 
+            // butFind
+            // 
+            this.butFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butFind.Location = new System.Drawing.Point(13, 150);
+            this.butFind.Name = "butFind";
+            this.butFind.Size = new System.Drawing.Size(100, 30);
+            this.butFind.TabIndex = 14;
+            this.butFind.Text = "Tìm kiếm";
+            this.butFind.UseVisualStyleBackColor = true;
+            // 
+            // txtMDS
+            // 
+            this.txtMDS.Location = new System.Drawing.Point(152, 39);
+            this.txtMDS.Name = "txtMDS";
+            this.txtMDS.Size = new System.Drawing.Size(160, 20);
+            this.txtMDS.TabIndex = 9;
+            // 
+            // txtNM
+            // 
+            this.txtNM.Location = new System.Drawing.Point(152, 91);
+            this.txtNM.Name = "txtNM";
+            this.txtNM.Size = new System.Drawing.Size(160, 20);
+            this.txtNM.TabIndex = 8;
+            // 
+            // txtMDG
+            // 
+            this.txtMDG.Location = new System.Drawing.Point(152, 65);
+            this.txtMDG.Name = "txtMDG";
+            this.txtMDG.Size = new System.Drawing.Size(160, 20);
+            this.txtMDG.TabIndex = 7;
+            // 
+            // txtNT
+            // 
+            this.txtNT.Location = new System.Drawing.Point(152, 117);
+            this.txtNT.Name = "txtNT";
+            this.txtNT.Size = new System.Drawing.Size(160, 20);
+            this.txtNT.TabIndex = 6;
+            // 
+            // txtMPM
+            // 
+            this.txtMPM.Location = new System.Drawing.Point(152, 13);
+            this.txtMPM.Name = "txtMPM";
+            this.txtMPM.Size = new System.Drawing.Size(160, 20);
+            this.txtMPM.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Ngày Trả";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Ngày Mượn";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Mã Độc Giả";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mã Đầu Sách";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã Phiếu Mượn";
             // 
             // frmMuonTra
             // 
@@ -347,6 +347,7 @@
             this.Name = "frmMuonTra";
             this.ShowIcon = false;
             this.Text = "Mượn Trả";
+            this.Load += new System.EventHandler(this.frmMuonTra_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);

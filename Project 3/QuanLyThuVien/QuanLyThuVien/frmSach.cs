@@ -16,5 +16,12 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+        ConnectData conn = new ConnectData();
+        public string constr = @"select * from tblDauSach";
+        private void frmSach_Load(object sender, EventArgs e)
+        {
+            conn.KhoiTao(dataGridView1, constr);
+            
+        }
     }
 }

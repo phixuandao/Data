@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace QuanLyThuVien
 {
@@ -15,6 +17,14 @@ namespace QuanLyThuVien
         public frmDocGia()
         {
             InitializeComponent();
+        }
+
+        ConnectData conn = new ConnectData();
+        public string constr = @"select * from tblDocGia";
+
+        private void frmDocGia_Load(object sender, EventArgs e)
+        {
+            conn.KhoiTao(dataGridView1, constr);
         }
     }
 }

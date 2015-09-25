@@ -175,6 +175,7 @@
             this.butfrmSach.Size = new System.Drawing.Size(100, 100);
             this.butfrmSach.TabIndex = 1;
             this.butfrmSach.UseVisualStyleBackColor = true;
+            this.butfrmSach.Click += new System.EventHandler(this.butfrmSach_Click);
             // 
             // butfrmDG
             // 
@@ -184,6 +185,7 @@
             this.butfrmDG.Size = new System.Drawing.Size(100, 100);
             this.butfrmDG.TabIndex = 0;
             this.butfrmDG.UseVisualStyleBackColor = true;
+            this.butfrmDG.Click += new System.EventHandler(this.butfrmDG_Click);
             // 
             // frmDangNhap
             // 
