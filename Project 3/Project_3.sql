@@ -25,11 +25,6 @@ create table tblMuonTra
 	NgayTra datetime not null check (datediff(day,getdate(),NgayTra) >0)
 )
 
-create table tblUser
-(
-	Taikhoan varchar(30) not null,
-	Matkhau varchar(30) not null,
-)
 
 insert into tblDauSach values ('DS0001', N'Dế mèn phiêu lưu kí', 10000)
 insert into tblDauSach values ('DS0002', N'Hạt giống tâm hồn',15000)
@@ -58,13 +53,6 @@ insert into tblMuonTra values ('PM0007','DG0001', 'DS0004', getdate(), '09/25/20
 insert into tblMuonTra values ('PM0008','DG0002', 'DS0008', getdate(), '09/30/2015')
 insert into tblMuonTra values ('PM0009','DG0002', 'DS0001', getdate(), '09/15/2015')
 insert into tblMuonTra values ('PM0010','DG0004', 'DS0002', getdate(), '12/08/2015')
-
-insert into tblUser values('nguyenanhdung','nguyenanhdung')
-insert into tblUser values('hoangdingdat','hoangdinhdat')
-insert into tblUser values('luongvanluan','luongvanluan')
-insert into tblUser values('levanvu','levanvu')
-insert into tblUser values('phamdinhminh','phamdinhminh')
-insert into tblUser values('phixuandao','phixuandao')
 
 create proc AddDS(@tends nvarchar(50), @giaban bigint)
 as
