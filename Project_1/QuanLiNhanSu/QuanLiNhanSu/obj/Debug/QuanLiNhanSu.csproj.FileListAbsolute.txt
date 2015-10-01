@@ -1,1 +1,2 @@
 c:\users\luanjr1994\documents\visual studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe.config
+C:\Users\Admin\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe.config
