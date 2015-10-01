@@ -90,16 +90,11 @@ begin
 delete from tblDauSach where MaDS = @mads
 end
 
-create proc FindDS(@tends nvarchar(50))
+create proc FindDS(@str nvarchar(50))
 as
 begin
-select * from tblDauSach where TenDS like '%' + @tends + '%'
-end
-
-create proc FindMDS1 (@mads varchar(10))
-as
-begin
-select *from tblDauSach where MaDS like '%' + @mads + '%'
+select * from tblDauSach where TenDS like '%' + @str + '%' or MaDS like '%' + @str +'%'
+or convert(nvarchar(50),giaban) like '%' + @str + '%'
 end
 
 create proc AddDG(@tendg nvarchar(50), @ngaysinh datetime, @gioitinh nvarchar(3))
@@ -126,17 +121,13 @@ begin
 delete from tblDocGia where MaDG = @madg
 end
 
-create proc FindDG(@tendg nvarchar(50))
+create proc FindDG(@str nvarchar(50))
 as
 begin
-select * from tblDocGia where TenDG like '%' + @tendg + '%'
+select * from tblDocGia where TenDG like '%' + @str + '%' or MaDG like '%' + @str + '%' 
+or GioiTinh like '%' + @str + '%' or convert(nvarchar(50),Ngaysinh) like '%' + @str + '%' 
 end
 
-create proc FindMDG1(@madg varchar(10))
-as
-begin
-select * from tblDocGia where MaDG like '%' + @madg + '%'
-end
 
 create proc AddMT(@madg varchar(10), @mads varchar(10), @ngaytra datetime)
 as
@@ -161,20 +152,9 @@ begin
 delete from tblMuonTra where MaPM = @mapm
 end
 
-create proc FindMT(@mapm varchar(10))
+create proc FindMT(@str nvarchar(50))
 as
 begin
-select * from tblMuonTra where MaPM like '%' + @mapm + '%'
-end
-
-create proc FindMDS2 (@mads varchar(10))
-as
-begin
-select * from tblMuonTra where MaDS like '%' + @mads + '%'
-end
-
-create proc FindMDG2 (@madg varchar(10))
-as
-begin
-select * from tblMuonTra where MaDG like '%' + @madg + '%'
+select * from tblMuonTra where MaPM like '%' + @str + '%' or MaDS like '%' + @str +'%'
+or MaDG like '%' + @str +'%' or convert(nvarchar(50),ngaymuon) like '%' + @str +'%' or convert(nvarchar(50),ngaytra) like '%' + @str +'%'
 end
