@@ -3,9 +3,9 @@
 CREATE TABLE HocSinh(
 	ID_Hs CHAR(10) NOT NULL,
 	HoTen NVARCHAR(50) NOT NULL,
+	Quequan nvarchar(100),
 	GT CHAR(3),
 	NgaySinh date,
-	Quequan nvarchar(100),
 	ID_Lop CHAR(10),
 	ID_MonHoc CHAR(10)
 )
@@ -40,26 +40,26 @@ alter table MonHoc add constraint MH_ID_PK primary key(ID_MonHoc)
 
 insert into HocSinh(ID_Hs,HoTen,GT,NgaySinh,Quequan,ID_Lop,ID_MonHoc)
 values
-('HS001',N'Lê Công Tuấn Anh','Nam',1994-01-01,N'Vĩnh Phúc','LOP01','MH01'),
-('HS002',N'Nguyễn Chí Công','Nam',1994-01-01,N'Hà Giang','LOP01','MH01'),
-('HS003',N'Nguyễn Đức Cảnh','Nam',1994-01-01,N'Nam Định','LOP01','MH01'),
-('HS004',N'Nguyễn Anh Dũng','Nam',1994-01-01,N'Hà Nội','LOP01','MH01'),
-('HS005',N'Phí Xuân Đạo','Nam',1994-01-01,N'Hà Tây','LOP02','MH01'),
-('HS006',N'Hoàng Đình Đạt','Nam',1994-01-01,N'Bắc Giang','LOP02','MH01'),
-('HS007',N'Khương Duy Hoàng','Nam',1994-01-01,N'Thanh Hóa','LOP02','MH01'),
-('HS008',N'Nguyễn Mạnh Hải','Nam',1994-01-01,N'Hà Nam','LOP02','MH01'),
+('HS001',N'Lê Công Tuấn Anh','Nam','1994-01-01',N'Vĩnh Phúc','LOP01','MH01'),
+('HS002',N'Nguyễn Chí Công','Nam','1994-01-01',N'Hà Giang','LOP01','MH01'),
+('HS003',N'Nguyễn Đức Cảnh','Nam','1994-01-01',N'Nam Định','LOP01','MH01'),
+('HS004',N'Nguyễn Anh Dũng','Nam','1994-01-01',N'Hà Nội','LOP01','MH01'),
+('HS005',N'Phí Xuân Đạo','Nam','1994-01-01',N'Hà Tây','LOP02','MH01'),
+('HS006',N'Hoàng Đình Đạt','Nam','1994-01-01',N'Bắc Giang','LOP02','MH01'),
+('HS007',N'Khương Duy Hoàng','Nam','1994-01-01',N'Thanh Hóa','LOP02','MH01'),
+('HS008',N'Nguyễn Mạnh Hải','Nam','1994-01-01',N'Hà Nam','LOP02','MH01'),
 
-('HS009',N'Lưu Văn Lâm','Nam',1994-01-01,N'Hải Phòng','LOP03','MH02'),
-('HS010',N'Lương Văn Luận','Nam',1994-01-01,N'Bắc Giang','LOP03','MH02'),
-('HS011',N'Võ Khương Lĩnh','Nam',1994-01-01,N'Sài Gòn','LOP03','MH02'),
-('HS012',N'Lê Tuấn Minh','Nam',1994-01-01,N'Hà Nội','LOP03','MH02'),
+('HS009',N'Lưu Văn Lâm','Nam','1994-01-01',N'Hải Phòng','LOP03','MH02'),
+('HS010',N'Lương Văn Luận','Nam','1994-01-01',N'Bắc Giang','LOP03','MH02'),
+('HS011',N'Võ Khương Lĩnh','Nam','1994-01-01',N'Sài Gòn','LOP03','MH02'),
+('HS012',N'Lê Tuấn Minh','Nam','1994-01-01',N'Hà Nội','LOP03','MH02'),
 
-('HS013',N'Phạm Đình Minh','Nam',1994-01-01,N'Thái Bình','LOP04','MH03'),
-('HS014',N'Ngô Hồng Quân','Nam',1994-01-01,N'Hà Nội','LOP04','MH03'),
-('HS015',N'Đinh Ngọc San','Nam',1994-01-01,N'Ninh Bình','LOP04','MH03'),
-('HS016',N'Nguyễn Quang Trường','Nam',1994-01-01,N'Hải Dương','LOP04','MH03'),
-('HS017',N'Lê Văn Vũ','Nam',1994-01-01,N'Hà Nam','LOP04','MH03'),
-('HS018',N'Trần Văn Anh Tuấn','Nam',1994-01-01,N'Đà Nẵng','LOP04','MH03')
+('HS013',N'Phạm Đình Minh','Nam','1994-01-01',N'Thái Bình','LOP04','MH03'),
+('HS014',N'Ngô Hồng Quân','Nam','1994-01-01',N'Hà Nội','LOP04','MH03'),
+('HS015',N'Đinh Ngọc San','Nam','1994-01-01',N'Ninh Bình','LOP04','MH03'),
+('HS016',N'Nguyễn Quang Trường','Nam','1994-01-01',N'Hải Dương','LOP04','MH03'),
+('HS017',N'Lê Văn Vũ','Nam','1994-01-01',N'Hà Nam','LOP04','MH03'),
+('HS018',N'Trần Văn Anh Tuấn','Nam','1994-01-01',N'Đà Nẵng','LOP04','MH03')
 
 insert into GiaoVien(ID_Gv,HoTen,GT,NgaySinh,ChucVu,ID_MonHoc,ID_Lop)
 values
