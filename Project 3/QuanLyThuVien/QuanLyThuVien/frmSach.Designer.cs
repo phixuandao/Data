@@ -29,27 +29,28 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.butOK = new System.Windows.Forms.Button();
-            this.txtFind = new System.Windows.Forms.TextBox();
-            this.butFind = new System.Windows.Forms.Button();
-            this.butDel = new System.Windows.Forms.Button();
-            this.butUpd = new System.Windows.Forms.Button();
-            this.butIns = new System.Windows.Forms.Button();
-            this.txtTenDS = new System.Windows.Forms.TextBox();
-            this.txtGB = new System.Windows.Forms.TextBox();
-            this.txtMDS = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtMDS = new System.Windows.Forms.TextBox();
+            this.txtGB = new System.Windows.Forms.TextBox();
+            this.txtTenDS = new System.Windows.Forms.TextBox();
+            this.butIns = new System.Windows.Forms.Button();
+            this.butUpd = new System.Windows.Forms.Button();
+            this.butDel = new System.Windows.Forms.Button();
+            this.butFind = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rMaDS = new System.Windows.Forms.RadioButton();
+            this.rTenDS = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(484, 225);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.butDel);
+            this.panel2.Controls.Add(this.butUpd);
+            this.panel2.Controls.Add(this.butIns);
+            this.panel2.Controls.Add(this.txtTenDS);
+            this.panel2.Controls.Add(this.txtGB);
+            this.panel2.Controls.Add(this.txtMDS);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(484, 237);
+            this.panel2.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -82,8 +101,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(484, 225);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -109,133 +126,15 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // panel2
+            // label1
             // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.butDel);
-            this.panel2.Controls.Add(this.butUpd);
-            this.panel2.Controls.Add(this.butIns);
-            this.panel2.Controls.Add(this.txtTenDS);
-            this.panel2.Controls.Add(this.txtGB);
-            this.panel2.Controls.Add(this.txtMDS);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(484, 237);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.butOK);
-            this.panel3.Controls.Add(this.txtFind);
-            this.panel3.Controls.Add(this.butFind);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 135);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(484, 102);
-            this.panel3.TabIndex = 10;
-            // 
-            // butOK
-            // 
-            this.butOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butOK.Location = new System.Drawing.Point(351, 0);
-            this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(100, 30);
-            this.butOK.TabIndex = 11;
-            this.butOK.Text = "Xong";
-            this.butOK.UseVisualStyleBackColor = true;
-            this.butOK.Visible = false;
-            this.butOK.Click += new System.EventHandler(this.butOK_Click);
-            // 
-            // txtFind
-            // 
-            this.txtFind.Location = new System.Drawing.Point(216, 14);
-            this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(183, 20);
-            this.txtFind.TabIndex = 11;
-            // 
-            // butFind
-            // 
-            this.butFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butFind.Location = new System.Drawing.Point(87, 11);
-            this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(100, 25);
-            this.butFind.TabIndex = 9;
-            this.butFind.Text = "Tìm Kiếm";
-            this.butFind.UseVisualStyleBackColor = true;
-            this.butFind.Click += new System.EventHandler(this.butFind_Click);
-            // 
-            // butDel
-            // 
-            this.butDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDel.Location = new System.Drawing.Point(299, 99);
-            this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(100, 30);
-            this.butDel.TabIndex = 8;
-            this.butDel.Text = "Xóa";
-            this.butDel.UseVisualStyleBackColor = true;
-            this.butDel.Click += new System.EventHandler(this.butDel_Click);
-            // 
-            // butUpd
-            // 
-            this.butUpd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butUpd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butUpd.Location = new System.Drawing.Point(193, 99);
-            this.butUpd.Name = "butUpd";
-            this.butUpd.Size = new System.Drawing.Size(100, 30);
-            this.butUpd.TabIndex = 7;
-            this.butUpd.Text = "Chỉnh sửa";
-            this.butUpd.UseVisualStyleBackColor = true;
-            this.butUpd.Click += new System.EventHandler(this.butUpd_Click);
-            // 
-            // butIns
-            // 
-            this.butIns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butIns.Location = new System.Drawing.Point(87, 99);
-            this.butIns.Name = "butIns";
-            this.butIns.Size = new System.Drawing.Size(100, 30);
-            this.butIns.TabIndex = 6;
-            this.butIns.Text = "Thêm mới";
-            this.butIns.UseVisualStyleBackColor = true;
-            this.butIns.Click += new System.EventHandler(this.butIns_Click);
-            // 
-            // txtTenDS
-            // 
-            this.txtTenDS.Location = new System.Drawing.Point(216, 37);
-            this.txtTenDS.Name = "txtTenDS";
-            this.txtTenDS.Size = new System.Drawing.Size(183, 20);
-            this.txtTenDS.TabIndex = 5;
-            // 
-            // txtGB
-            // 
-            this.txtGB.Location = new System.Drawing.Point(216, 63);
-            this.txtGB.Name = "txtGB";
-            this.txtGB.Size = new System.Drawing.Size(183, 20);
-            this.txtGB.TabIndex = 4;
-            // 
-            // txtMDS
-            // 
-            this.txtMDS.Location = new System.Drawing.Point(216, 9);
-            this.txtMDS.Name = "txtMDS";
-            this.txtMDS.Size = new System.Drawing.Size(183, 20);
-            this.txtMDS.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Giá Bán";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(84, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã Đầu Sách";
             // 
             // label2
             // 
@@ -247,15 +146,123 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên Đầu Sách";
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(84, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã Đầu Sách";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(84, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Giá Bán";
+            // 
+            // txtMDS
+            // 
+            this.txtMDS.Location = new System.Drawing.Point(216, 9);
+            this.txtMDS.Name = "txtMDS";
+            this.txtMDS.Size = new System.Drawing.Size(183, 20);
+            this.txtMDS.TabIndex = 3;
+            // 
+            // txtGB
+            // 
+            this.txtGB.Location = new System.Drawing.Point(216, 63);
+            this.txtGB.Name = "txtGB";
+            this.txtGB.Size = new System.Drawing.Size(183, 20);
+            this.txtGB.TabIndex = 4;
+            // 
+            // txtTenDS
+            // 
+            this.txtTenDS.Location = new System.Drawing.Point(216, 37);
+            this.txtTenDS.Name = "txtTenDS";
+            this.txtTenDS.Size = new System.Drawing.Size(183, 20);
+            this.txtTenDS.TabIndex = 5;
+            // 
+            // butIns
+            // 
+            this.butIns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butIns.Location = new System.Drawing.Point(87, 99);
+            this.butIns.Name = "butIns";
+            this.butIns.Size = new System.Drawing.Size(100, 30);
+            this.butIns.TabIndex = 6;
+            this.butIns.Text = "Thêm mới";
+            this.butIns.UseVisualStyleBackColor = true;
+            // 
+            // butUpd
+            // 
+            this.butUpd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUpd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butUpd.Location = new System.Drawing.Point(193, 99);
+            this.butUpd.Name = "butUpd";
+            this.butUpd.Size = new System.Drawing.Size(100, 30);
+            this.butUpd.TabIndex = 7;
+            this.butUpd.Text = "Chỉnh sửa";
+            this.butUpd.UseVisualStyleBackColor = true;
+            // 
+            // butDel
+            // 
+            this.butDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDel.Location = new System.Drawing.Point(299, 99);
+            this.butDel.Name = "butDel";
+            this.butDel.Size = new System.Drawing.Size(100, 30);
+            this.butDel.TabIndex = 8;
+            this.butDel.Text = "Xóa";
+            this.butDel.UseVisualStyleBackColor = true;
+            // 
+            // butFind
+            // 
+            this.butFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butFind.Location = new System.Drawing.Point(87, 11);
+            this.butFind.Name = "butFind";
+            this.butFind.Size = new System.Drawing.Size(100, 25);
+            this.butFind.TabIndex = 9;
+            this.butFind.Text = "Tìm Kiếm";
+            this.butFind.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.rTenDS);
+            this.panel3.Controls.Add(this.rMaDS);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.butFind);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 135);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(484, 102);
+            this.panel3.TabIndex = 10;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(216, 14);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(183, 20);
+            this.textBox1.TabIndex = 11;
+            // 
+            // rMaDS
+            // 
+            this.rMaDS.AutoSize = true;
+            this.rMaDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rMaDS.Location = new System.Drawing.Point(87, 40);
+            this.rMaDS.Name = "rMaDS";
+            this.rMaDS.Size = new System.Drawing.Size(117, 20);
+            this.rMaDS.TabIndex = 12;
+            this.rMaDS.TabStop = true;
+            this.rMaDS.Text = "Mã Đầu Sách";
+            this.rMaDS.UseVisualStyleBackColor = true;
+            // 
+            // rTenDS
+            // 
+            this.rTenDS.AutoSize = true;
+            this.rTenDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTenDS.Location = new System.Drawing.Point(276, 40);
+            this.rTenDS.Name = "rTenDS";
+            this.rTenDS.Size = new System.Drawing.Size(123, 20);
+            this.rTenDS.TabIndex = 13;
+            this.rTenDS.TabStop = true;
+            this.rTenDS.Text = "Tên Đầu Sách";
+            this.rTenDS.UseVisualStyleBackColor = true;
             // 
             // frmSach
             // 
@@ -269,11 +276,10 @@
             this.Name = "frmSach";
             this.ShowIcon = false;
             this.Text = "Sách";
-            this.Load += new System.EventHandler(this.frmSach_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -289,7 +295,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtFind;
+        private System.Windows.Forms.RadioButton rTenDS;
+        private System.Windows.Forms.RadioButton rMaDS;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button butFind;
         private System.Windows.Forms.Button butDel;
         private System.Windows.Forms.Button butUpd;
@@ -300,6 +308,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button butOK;
     }
 }
