@@ -30,8 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.rTenDG = new System.Windows.Forms.RadioButton();
-            this.rMDG = new System.Windows.Forms.RadioButton();
+            this.butOK = new System.Windows.Forms.Button();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.butFind = new System.Windows.Forms.Button();
             this.butDel = new System.Windows.Forms.Button();
@@ -79,8 +78,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.rTenDG);
-            this.panel3.Controls.Add(this.rMDG);
+            this.panel3.Controls.Add(this.butOK);
             this.panel3.Controls.Add(this.txtFind);
             this.panel3.Controls.Add(this.butFind);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -89,29 +87,17 @@
             this.panel3.Size = new System.Drawing.Size(484, 319);
             this.panel3.TabIndex = 12;
             // 
-            // rTenDG
+            // butOK
             // 
-            this.rTenDG.AutoSize = true;
-            this.rTenDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTenDG.Location = new System.Drawing.Point(296, 39);
-            this.rTenDG.Name = "rTenDG";
-            this.rTenDG.Size = new System.Drawing.Size(112, 20);
-            this.rTenDG.TabIndex = 15;
-            this.rTenDG.TabStop = true;
-            this.rTenDG.Text = "Tên Độc Giả";
-            this.rTenDG.UseVisualStyleBackColor = true;
-            // 
-            // rMDG
-            // 
-            this.rMDG.AutoSize = true;
-            this.rMDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rMDG.Location = new System.Drawing.Point(70, 40);
-            this.rMDG.Name = "rMDG";
-            this.rMDG.Size = new System.Drawing.Size(106, 20);
-            this.rMDG.TabIndex = 14;
-            this.rMDG.TabStop = true;
-            this.rMDG.Text = "Mã Độc Giả";
-            this.rMDG.UseVisualStyleBackColor = true;
+            this.butOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butOK.Location = new System.Drawing.Point(188, 46);
+            this.butOK.Name = "butOK";
+            this.butOK.Size = new System.Drawing.Size(100, 30);
+            this.butOK.TabIndex = 13;
+            this.butOK.Text = "Xong";
+            this.butOK.UseVisualStyleBackColor = true;
+            this.butOK.Visible = false;
+            this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
             // txtFind
             // 
@@ -130,6 +116,7 @@
             this.butFind.Tag = "";
             this.butFind.Text = "Tìm kiếm";
             this.butFind.UseVisualStyleBackColor = true;
+            this.butFind.Click += new System.EventHandler(this.butFind_Click);
             // 
             // butDel
             // 
@@ -140,6 +127,7 @@
             this.butDel.TabIndex = 10;
             this.butDel.Text = "Xóa";
             this.butDel.UseVisualStyleBackColor = true;
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // butUpd
             // 
@@ -150,6 +138,7 @@
             this.butUpd.TabIndex = 9;
             this.butUpd.Text = "Chỉnh sửa";
             this.butUpd.UseVisualStyleBackColor = true;
+            this.butUpd.Click += new System.EventHandler(this.butUpd_Click);
             // 
             // butIns
             // 
@@ -160,6 +149,7 @@
             this.butIns.TabIndex = 8;
             this.butIns.Text = "Thêm mới";
             this.butIns.UseVisualStyleBackColor = true;
+            this.butIns.Click += new System.EventHandler(this.butIns_Click);
             // 
             // txtGT
             // 
@@ -259,6 +249,8 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(484, 237);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -325,8 +317,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton rTenDG;
-        private System.Windows.Forms.RadioButton rMDG;
         private System.Windows.Forms.TextBox txtFind;
         private System.Windows.Forms.Button butFind;
         private System.Windows.Forms.Button butDel;
@@ -340,6 +330,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button butOK;
     }
 }
 

@@ -89,6 +89,7 @@
             this.butJoin.TabIndex = 4;
             this.butJoin.Text = "Đăng nhập";
             this.butJoin.UseVisualStyleBackColor = true;
+            this.butJoin.Click += new System.EventHandler(this.butJoin_Click);
             // 
             // butQuit
             // 

@@ -36,13 +36,11 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.butOK = new System.Windows.Forms.Button();
             this.butDel = new System.Windows.Forms.Button();
             this.butUpd = new System.Windows.Forms.Button();
             this.butIns = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.rMDG = new System.Windows.Forms.RadioButton();
-            this.rMDS = new System.Windows.Forms.RadioButton();
-            this.rMPM = new System.Windows.Forms.RadioButton();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.butFind = new System.Windows.Forms.Button();
             this.txtMDS = new System.Windows.Forms.TextBox();
@@ -93,6 +91,8 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(484, 254);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -136,6 +136,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.butOK);
             this.panel2.Controls.Add(this.butDel);
             this.panel2.Controls.Add(this.butUpd);
             this.panel2.Controls.Add(this.butIns);
@@ -156,6 +157,18 @@
             this.panel2.Size = new System.Drawing.Size(484, 208);
             this.panel2.TabIndex = 1;
             // 
+            // butOK
+            // 
+            this.butOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butOK.Location = new System.Drawing.Point(192, 89);
+            this.butOK.Name = "butOK";
+            this.butOK.Size = new System.Drawing.Size(100, 30);
+            this.butOK.TabIndex = 14;
+            this.butOK.Text = "Xong";
+            this.butOK.UseVisualStyleBackColor = true;
+            this.butOK.Visible = false;
+            this.butOK.Click += new System.EventHandler(this.butOK_Click);
+            // 
             // butDel
             // 
             this.butDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -165,6 +178,7 @@
             this.butDel.TabIndex = 13;
             this.butDel.Text = "Xóa";
             this.butDel.UseVisualStyleBackColor = true;
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // butUpd
             // 
@@ -175,6 +189,7 @@
             this.butUpd.TabIndex = 12;
             this.butUpd.Text = "Chỉnh sửa";
             this.butUpd.UseVisualStyleBackColor = true;
+            this.butUpd.Click += new System.EventHandler(this.butUpd_Click);
             // 
             // butIns
             // 
@@ -185,12 +200,10 @@
             this.butIns.TabIndex = 11;
             this.butIns.Text = "Thêm mới";
             this.butIns.UseVisualStyleBackColor = true;
+            this.butIns.Click += new System.EventHandler(this.butIns_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.rMDG);
-            this.panel3.Controls.Add(this.rMDS);
-            this.panel3.Controls.Add(this.rMPM);
             this.panel3.Controls.Add(this.txtFind);
             this.panel3.Controls.Add(this.butFind);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
@@ -198,40 +211,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(152, 208);
             this.panel3.TabIndex = 10;
-            // 
-            // rMDG
-            // 
-            this.rMDG.AutoSize = true;
-            this.rMDG.Location = new System.Drawing.Point(13, 95);
-            this.rMDG.Name = "rMDG";
-            this.rMDG.Size = new System.Drawing.Size(82, 17);
-            this.rMDG.TabIndex = 17;
-            this.rMDG.TabStop = true;
-            this.rMDG.Text = "Mã Độc Giả";
-            this.rMDG.UseVisualStyleBackColor = true;
-            // 
-            // rMDS
-            // 
-            this.rMDS.AutoSize = true;
-            this.rMDS.Location = new System.Drawing.Point(13, 69);
-            this.rMDS.Name = "rMDS";
-            this.rMDS.Size = new System.Drawing.Size(91, 17);
-            this.rMDS.TabIndex = 16;
-            this.rMDS.TabStop = true;
-            this.rMDS.Tag = "";
-            this.rMDS.Text = "Mã Đầu Sách";
-            this.rMDS.UseVisualStyleBackColor = true;
-            // 
-            // rMPM
-            // 
-            this.rMPM.AutoSize = true;
-            this.rMPM.Location = new System.Drawing.Point(13, 43);
-            this.rMPM.Name = "rMPM";
-            this.rMPM.Size = new System.Drawing.Size(100, 17);
-            this.rMPM.TabIndex = 15;
-            this.rMPM.TabStop = true;
-            this.rMPM.Text = "Mã Phiếu Mượn";
-            this.rMPM.UseVisualStyleBackColor = true;
             // 
             // txtFind
             // 
@@ -243,12 +222,13 @@
             // butFind
             // 
             this.butFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butFind.Location = new System.Drawing.Point(13, 150);
+            this.butFind.Location = new System.Drawing.Point(13, 39);
             this.butFind.Name = "butFind";
             this.butFind.Size = new System.Drawing.Size(100, 30);
             this.butFind.TabIndex = 14;
             this.butFind.Text = "Tìm kiếm";
             this.butFind.UseVisualStyleBackColor = true;
+            this.butFind.Click += new System.EventHandler(this.butFind_Click);
             // 
             // txtMDS
             // 
@@ -372,9 +352,6 @@
         private System.Windows.Forms.Button butUpd;
         private System.Windows.Forms.Button butIns;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton rMDG;
-        private System.Windows.Forms.RadioButton rMDS;
-        private System.Windows.Forms.RadioButton rMPM;
         private System.Windows.Forms.TextBox txtFind;
         private System.Windows.Forms.Button butFind;
         private System.Windows.Forms.TextBox txtMDS;
@@ -387,5 +364,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button butOK;
     }
 }

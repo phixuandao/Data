@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyThuVien
 {
@@ -16,6 +17,9 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+
+        ConnectData conn = new ConnectData();
+        public string str = @"select * from tblUser";
 
         private void butfrmMuonTra_Click(object sender, EventArgs e)
         {
@@ -39,6 +43,30 @@ namespace QuanLyThuVien
         {
             frmSach frms = new frmSach();
             frms.ShowDialog();
+        }
+
+        private void butJoin_Click(object sender, EventArgs e)
+        {
+            conn.MoKetNoi();
+            SqlDataAdapter da = new SqlDataAdapter(str, conn.conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow row in dt.Rows)
+            {
+                if (row[0].ToString() == txtUser.Text && row[1].ToString() == txtPass.Text)
+                {
+                    MessageBox.Show("Đăng nhập thành công");
+                    break;
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản không hợp lệ");
+                    break;
+                } 
+                
+            }
+            txtPass.Text = txtUser.Text = string.Empty;
+            conn.DongKetNoi();
         }
     }
 }
