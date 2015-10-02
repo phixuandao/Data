@@ -41,6 +41,7 @@ namespace QuanLiNhanSu
             cbxMaCV.Text = dtgNhanVien.Rows[dong].Cells[6].Value.ToString();
             cbxMaPB.Text = dtgNhanVien.Rows[dong].Cells[7].Value.ToString();
         }
+<<<<<<< HEAD
         private void Init()
         {
             
@@ -49,6 +50,8 @@ namespace QuanLiNhanSu
         {
 
         }
+=======
+>>>>>>> KennyTung94-patch-1
         
     }
 }

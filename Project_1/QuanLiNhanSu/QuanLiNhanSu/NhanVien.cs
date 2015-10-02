@@ -20,6 +20,7 @@ namespace QuanLiNhanSu
             ad.Fill(dt);
             return dt;
         }
+<<<<<<< HEAD
         public string ThemNV(string tennv,string ngaysinh,string gioitinh,string quequan,string luong,string macv,string mapb)
         {
             string str = "ThemNhanVien";
@@ -107,5 +108,7 @@ namespace QuanLiNhanSu
             con.Close();
             return kq;
         }
+=======
+>>>>>>> KennyTung94-patch-1
     }
 }
